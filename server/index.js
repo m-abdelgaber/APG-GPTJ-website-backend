@@ -23,6 +23,11 @@ mongoose.connection.on('disconnected', function(){
     console.log('db is disconnected successfully');
 });
 
+app.get('/test', (req, res)=>{
+    res.json("all goood mate");
+});
+
+
 app.get('/getPoems', (req, res)=>{
     poemModel.find({},(err, result)=>{
         if(err){
